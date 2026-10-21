@@ -4,6 +4,9 @@
  */
 package co.edu.sena.examplegit.crux;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Aprendiz
@@ -17,6 +20,21 @@ public class JFrameApprentice extends javax.swing.JFrame {
      */
     public JFrameApprentice() {
         initComponents();
+       
+
+    // Requerimiento 2: lista de aprendices
+    List<Apprentice> apprentices = new ArrayList<>();
+    apprentices.add(new Apprentice("Juan Camilo Lopez", 17, "3001111111"));
+    apprentices.add(new Apprentice("Gabriela Isaziga", 18, "3002222222"));
+    apprentices.add(new Apprentice("Nicolas Valecia", 17, "3003333333"));
+    apprentices.add(new Apprentice("Michael Trejos", 17, "3004444444"));
+
+    // Requerimiento 3: mostrarlos en el combo
+    JcomboAprendices.removeAllItems();
+    for (Apprentice a : apprentices) {
+        JcomboAprendices.addItem(a.getFullname());
+    }
+        
     }
 
     /**
@@ -28,18 +46,35 @@ public class JFrameApprentice extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        JcomboAprendices = new javax.swing.JComboBox<>();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aprendices");
+
+        jLabel1.setText("Aprendices: ");
+
+        JcomboAprendices.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "APRENDICES" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(jLabel1)
+                .addGap(52, 52, 52)
+                .addComponent(JcomboAprendices, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(JcomboAprendices, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(215, Short.MAX_VALUE))
         );
 
         pack();
@@ -72,5 +107,7 @@ public class JFrameApprentice extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> JcomboAprendices;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
