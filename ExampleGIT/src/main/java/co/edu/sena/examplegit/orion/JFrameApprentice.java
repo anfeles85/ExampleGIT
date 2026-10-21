@@ -4,6 +4,10 @@
  */
 package co.edu.sena.examplegit.orion;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
+
 /**
  *
  * @author Aprendiz
@@ -17,6 +21,16 @@ public class JFrameApprentice extends javax.swing.JFrame {
      */
     public JFrameApprentice() {
         initComponents();
+        List<String> Apprentice = new ArrayList<>();
+        Apprentice.add("Santiago Santa Sanchez");
+        Apprentice.add("Juan Sebastian Gil Ibarguen");
+        Apprentice.add("Nicolas Medina Micolta");
+        
+        DefaultComboBoxModel<String> modelo = new DefaultComboBoxModel<>();
+        for (String name : Apprentice) {
+        modelo.addElement(name);
+    }
+        jComboBoxApprentice.setModel(modelo);
     }
 
     /**
@@ -28,18 +42,69 @@ public class JFrameApprentice extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+<<<<<<< HEAD
+<<<<<<< HEAD
+        jComboBoxApprentice = new javax.swing.JComboBox<>();
+=======
+        jComboBox1 = new javax.swing.JComboBox<>();
+>>>>>>> origin/orion
+=======
+        jComboBox1 = new javax.swing.JComboBox<>();
+>>>>>>> origin/orion
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aprendices");
 
+        jLabel1.setText("Apredices");
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+>>>>>>> origin/orion
+=======
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+>>>>>>> origin/orion
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jLabel1)
+                .addGap(77, 77, 77)
+<<<<<<< HEAD
+<<<<<<< HEAD
+                .addComponent(jComboBoxApprentice, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
+=======
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(156, Short.MAX_VALUE))
+>>>>>>> origin/orion
+=======
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(156, Short.MAX_VALUE))
+>>>>>>> origin/orion
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    .addComponent(jComboBoxApprentice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+=======
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> origin/orion
+=======
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> origin/orion
+                .addContainerGap(230, Short.MAX_VALUE))
         );
 
         pack();
@@ -72,5 +137,15 @@ public class JFrameApprentice extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
+<<<<<<< HEAD
+    private javax.swing.JComboBox<String> jComboBoxApprentice;
+=======
+    private javax.swing.JComboBox<String> jComboBox1;
+>>>>>>> origin/orion
+=======
+    private javax.swing.JComboBox<String> jComboBox1;
+>>>>>>> origin/orion
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
