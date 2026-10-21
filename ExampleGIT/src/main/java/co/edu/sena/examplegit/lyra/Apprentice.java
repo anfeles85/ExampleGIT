@@ -12,25 +12,26 @@ package co.edu.sena.examplegit.lyra;
  * deberá sobreescribir el método toString el cual retorne solamente la variable el fullname.
  */
 public class Apprentice {
-    private String fullname;
+
+    private String fullName;
     private int age;
-    private double phone;
-    
+    private String phone;
+
     public Apprentice() {
     }
 
-    public Apprentice(String fullname, int age, double phone) {
-        this.fullname = fullname;
+    public Apprentice(String fullName, int age, String phone) {
+        this.fullName = fullName;
         this.age = age;
         this.phone = phone;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public int getAge() {
@@ -41,16 +42,19 @@ public class Apprentice {
         this.age = age;
     }
 
-    public double getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(double phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
     @Override
     public String toString() {
-        return "Apprentice{" + "fullname=" + fullname + '}';
+        return "Apprentice{" + "fullName=" + fullName;
     }
+
 }
+
+    
