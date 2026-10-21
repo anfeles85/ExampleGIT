@@ -4,19 +4,33 @@
  */
 package co.edu.sena.examplegit.orion;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
+
 /**
  *
  * @author Aprendiz
  */
-public class JFrameApprentice extends javax.swing.JFrame {
+public class JframeApprentice extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(JFrameApprentice.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(JframeApprentice.class.getName());
 
     /**
-     * Creates new form JFrameApprentice
+     * Creates new form JframeApprentice
      */
-    public JFrameApprentice() {
+    public JframeApprentice() {
         initComponents();
+        List<String> Apprentice = new ArrayList<>();
+        Apprentice.add("Santiago Santa Sanchez");
+        Apprentice.add("Juan Sebastian Gil Ibarguen");
+        Apprentice.add("Nicolas Medina Micolta");
+        
+        DefaultComboBoxModel<String> modelo = new DefaultComboBoxModel<>();
+        for (String name : Apprentice) {
+        modelo.addElement(name);
+    }
+        jComboBoxApprentice.setModel(modelo);
     }
 
     /**
@@ -28,40 +42,40 @@ public class JFrameApprentice extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabelAprendices = new javax.swing.JLabel();
+        jComboBoxApprentice = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Aprendices");
 
-        jLabel1.setText("Apredices");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabelAprendices.setText("Aprendices");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(jLabel1)
-                .addGap(77, 77, 77)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addComponent(jLabelAprendices)
+                .addGap(63, 63, 63)
+                .addComponent(jComboBoxApprentice, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(75, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(230, Short.MAX_VALUE))
+                    .addComponent(jLabelAprendices)
+                    .addComponent(jComboBoxApprentice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(226, Short.MAX_VALUE))
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBoxApprenticeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxApprenticeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxApprenticeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -85,11 +99,11 @@ public class JFrameApprentice extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new JFrameApprentice().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new JframeApprentice().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JComboBox<String> jComboBoxApprentice;
+    private javax.swing.JLabel jLabelAprendices;
     // End of variables declaration//GEN-END:variables
 }
